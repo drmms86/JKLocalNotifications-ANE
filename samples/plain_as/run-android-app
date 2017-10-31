@@ -29,7 +29,7 @@ echo "***** compiling SWF file *****"
   -define+=CONFIG::device,true \
   -define+=CONFIG::iphone,false \
   -define+=CONFIG::android,true \
-  -external-library-path+=./../../bin/ext/LocalNotificationLib.ane \
+  -external-library-path+=$EXT_DIR/LocalNotificationLib.ane \
   -output ./$APP_NAME.swf \
   -- ./Sample.as
 

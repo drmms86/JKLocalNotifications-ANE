@@ -31,7 +31,7 @@ echo "***** compiling SWF file *****"
   -define+=CONFIG::device,true \
   -define+=CONFIG::iphone,false \
   -define+=CONFIG::android,true \
-  -external-library-path+=./../../bin/ext/LocalNotificationLib.ane \
+  -external-library-path+=./../../bin/dist/LocalNotificationLib.ane \
   -output ./$APP_NAME.swf \
   -- ./Sample.as
 
@@ -47,7 +47,7 @@ echo "***** packaging SWF file into APK *****"
   $APP_NAME.apk \
   ${APP_NAME}-app.xml \
   $APP_NAME.swf \
-  -extdir $EXT_DIR
+  -extdir ./../../bin/dist
 
 # For these steps emulator must be running
 # Create and configure an emulator then run it
@@ -65,4 +65,4 @@ echo "**** Install app in Android emulator ******"
 
 "$ADT" -installApp \
   -platform android \
-  -package $APP_NAME.apk # -device emulator-5556
+  -package $APP_NAME.apk
