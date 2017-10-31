@@ -18,6 +18,7 @@ mkdir -p $TEMP_PATH/iphone
 
 echo "****** Copying native library *******"
 
+echo $NATIVE_XCODE_FOLDER/$CONFIGURATION/lib$IOS_LIB_NAME.a
 cp $NATIVE_XCODE_FOLDER/$CONFIGURATION/lib$IOS_LIB_NAME.a $TEMP_PATH/iphone/
 
 echo "****** Compiling AS3 library *******"

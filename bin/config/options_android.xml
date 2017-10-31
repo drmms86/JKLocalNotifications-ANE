@@ -6,7 +6,7 @@
   <packagedResources>
     <packagedResource>
       <packageName>com.juankpro.ane.localnotif</packageName>
-        <folderName>res</folderName>
-        </packagedResource>
-    </packagedResources>
+      <folderName>res</folderName>
+    </packagedResource>
+  </packagedResources>
 </platform>
