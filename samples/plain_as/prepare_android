@@ -7,7 +7,7 @@ APP_NAME=sample
 CERT_FILE=test_android.p12
 CERT_PASS=1234
 
-RES_PATH="$EXT_DIR/../res"
+RES_PATH="$EXT_PATH/../res"
 
 echo "***** COPYING ANE RESOURCES"
 rm -rf $RES_PATH
@@ -25,7 +25,7 @@ echo "***** compiling SWF file *****"
   -define+=CONFIG::device,true \
   -define+=CONFIG::iphone,false \
   -define+=CONFIG::android,true \
-  -external-library-path+=$EXT_DIR/LocalNotificationLib.ane \
+  -external-library-path+=$EXT_PATH/LocalNotificationLib.ane \
   -output $APP_NAME.swf \
   -- Sample.as
 

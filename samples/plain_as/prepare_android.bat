@@ -7,7 +7,7 @@ set APP_NAME=sample
 set CERT_FILE=%PREPARE_SCRIPT_PATH%test_android.p12
 set CERT_PASS=1234
 
-set RES_PATH=%EXT_DIR%\..\res
+set RES_PATH=%EXT_PATH%\..\res
 
 echo ***** COPYING ANE RESOURCES *****
 rmdir /S /Q %RES_PATH%
@@ -24,6 +24,6 @@ call %AMXML% -swf-version %AIR_VERSION% ^
   -define+=CONFIG::device,true ^
   -define+=CONFIG::iphone,false ^
   -define+=CONFIG::android,true ^
-  -external-library-path+=%EXT_DIR%\LocalNotificationLib.ane ^
+  -external-library-path+=%EXT_PATH%\LocalNotificationLib.ane ^
   -output %PREPARE_SCRIPT_PATH%%APP_NAME%.swf ^
   -- %PREPARE_SCRIPT_PATH%Sample.as

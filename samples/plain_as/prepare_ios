@@ -9,7 +9,7 @@ CERT_PASS=1234
 PROVISIONING_PROFILE=test.mobileprovision
 IPHONE_SDK="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk"
 
-RES_PATH="$EXT_DIR/../res"
+RES_PATH="$EXT_PATH/../res"
 
 echo "***** IOS APP ******"
 echo "***** compiling SWF file *****"
@@ -18,7 +18,7 @@ echo "***** compiling SWF file *****"
   -define+=CONFIG::device,true \
   -define+=CONFIG::iphone,true \
   -define+=CONFIG::android,false \
-  -external-library-path+=$EXT_DIR/LocalNotificationLib.ane \
+  -external-library-path+=$EXT_PATH/LocalNotificationLib.ane \
   -output $APP_NAME.swf \
   -- Sample.as
 

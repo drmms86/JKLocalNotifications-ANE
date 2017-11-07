@@ -2,7 +2,7 @@
 
 set -e
 source ../../bin/config/config.sh
-BUILD_ANE_PATH="$EXT_DIR/../build-ane-android"
+BUILD_ANE_PATH="$EXT_PATH/../build-ane-android"
 
 source prepare_android
 
@@ -17,7 +17,7 @@ echo "***** packaging SWF file into APK *****"
   $APP_NAME.apk \
   ${APP_NAME}-app.xml \
   $APP_NAME.swf \
-  -extdir $EXT_DIR
+  -extdir $EXT_PATH
 
 # For these steps the device must be running
 # Set -device if more than one device is running.

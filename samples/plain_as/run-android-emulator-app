@@ -2,7 +2,7 @@
 
 set -e
 source ../../bin/config/config.sh
-BUILD_ANE_PATH="$EXT_DIR/../build-ane-android-emulator"
+BUILD_ANE_PATH="$EXT_PATH/../build-ane-android-emulator"
 
 source prepare_android
 
@@ -18,7 +18,7 @@ echo "***** packaging SWF file into APK *****"
   $APP_NAME.apk \
   ${APP_NAME}-app.xml \
   $APP_NAME.swf \
-  -extdir $EXT_DIR
+  -extdir $EXT_PATH
 
 # To install successfully emulator must be running.
 # Create and configure an emulator then run it.

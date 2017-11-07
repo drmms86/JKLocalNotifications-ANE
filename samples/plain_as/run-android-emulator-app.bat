@@ -2,7 +2,7 @@ echo off
 
 set RUN_SCRIPT_PATH=%~dp0
 call %RUN_SCRIPT_PATH%..\..\bin\config\config
-set BUILD_ANE_PATH=%EXT_DIR%\..\build-ane-android-emulator
+set BUILD_ANE_PATH=%EXT_PATH%\..\build-ane-android-emulator
 
 call %RUN_SCRIPT_PATH%prepare_android
 
@@ -18,7 +18,7 @@ call %ADT% -package ^
   %RUN_SCRIPT_PATH%%APP_NAME%.apk ^
   %RUN_SCRIPT_PATH%%APP_NAME%-app.xml ^
   %RUN_SCRIPT_PATH%%APP_NAME%.swf ^
-  -extdir %EXT_DIR%
+  -extdir %EXT_PATH%
 
 :: To install successfully emulator must be running.
 :: Create and configure an emulator then run it.

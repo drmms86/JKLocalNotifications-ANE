@@ -2,7 +2,7 @@ echo off
 
 set RUN_SCRIPT_PATH=%~dp0
 call %RUN_SCRIPT_PATH%..\..\bin\config\config
-set BUILD_ANE_PATH=%EXT_DIR%\..\build-ane-android
+set BUILD_ANE_PATH=%EXT_PATH%\..\build-ane-android
 
 call %RUN_SCRIPT_PATH%\prepare_android
 
@@ -17,7 +17,7 @@ call %ADT% -package ^
   %APP_NAME%.apk ^
   %APP_NAME%-app.xml ^
   %APP_NAME%.swf ^
-  -extdir %EXT_DIR%
+  -extdir %EXT_PATH%
 
 :: For these steps the device must be running
 :: Set -device if more than one device is running.
